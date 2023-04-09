@@ -18,7 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -64,7 +64,20 @@
       <section class="section-hero">
         <h1 class="hero-title">Effective Solutions <br />for Your Business</h1>
         <div class="hero-container">
-          <button class="hero-btn" type="button">Order Service</button>
+          <button class="hero-btn" type="button" data-modal-open>
+            Order Service
+          </button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <div class="close-btn-container">
+                <button class="close-btn" type="button" data-modal-close>
+                  <svg class="close-icon" width="8" height="8">
+                    <use href="./images/icons.svg#icon-vector"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -423,5 +436,11 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
